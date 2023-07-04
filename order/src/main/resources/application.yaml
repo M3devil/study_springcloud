@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        cluster-name: beijing
+#        namespace: 190bf82c-9625-479b-9197-db4cfb74b761
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10000/eureka  # 连接地址
+
+devil:
+  name: firerain
+  password: 123
+

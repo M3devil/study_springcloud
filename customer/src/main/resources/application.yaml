@@ -1,0 +1,33 @@
+server:
+  port: 7070
+spring:
+  application:
+    name: customer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        cluster-name: beijing
+#        namespace: 190bf82c-9625-479b-9197-db4cfb74b761
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10000/eureka  # 连接地址
+
+id: 1000
+
+# 全局feign配置
+
+feign:
+  client:
+    config:
+      default:  # default表示全部
+        logger-level: Basic
+  httpclient:
+    enabled: true # 开启feign对httpClient依赖
+    max-connections: 200
+    max-connections-per-route: 50
+
+logging:
+  level:
+    root: debug
